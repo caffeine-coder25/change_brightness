@@ -1,27 +1,30 @@
-A C++ project to blur or smooth images using Homogeneous Blur.
+A C++ project to change the brightness of the images.
 
 INTRODUCTION:
 
-This packet can be used to blur or smooth images. This project is based on C++ and OpenCV library. 
+This packet can be used to increase or decrease the intensity of brightness in images. This project is based on C++ and OpenCV library. 
 
 ABOUT:
 
-Homogeneous Blur is the simplest method of smoothing an image. In this technique, each pixel value is calculated as the average value of the neighbourhood of the pixel defined by the kernel. Kernels used in the homogeneous blur is called normalized box filter. 
+In this operation, the value of each and every pixel in an image should be increased/decreased by a constant.
 
-You may define any size for this kernel according to your requirement. But it is preferable to define square kernels with a size of odd width and height. In the following project, I have used 99 x 99 normalized box filters.
+If you want to increase the brightness of an image, you have to add some positive constant value to each and every pixel in the image. If you want to decrease the brightness of an image, you have to subtract some positive constant value from each and every pixel in the image.
 
-You have to choose the right size of the kernel to define the neighbourhood of each pixel. If it is too large, small features of the image may be disappeared and the image will look blurred. If it is too small, you cannot eliminate noises in the image.
+The valid value range of every pixel in the image should be 0 - 255.
 
-In simple words, I have used 99 x 99 normalized box filters, you can control the intensity of the blur with the size of the kernel, increase to increase the intensity of blur and decrease to decrease the intensity of the blur.
+You must make sure that pixel values in the output image should not exceed the maximum allowable limit by adding some constant to the original image. If it exceeds the maximum limit, you must assign the maximum value instead of the correct value and in the same way, You must make sure that pixel values in the output image should not go below the minimum allowable limit after subtracting some constant from the original image. If it goes below the minimum limit, you must assign the minimum value instead of the correct value.
 
+In this project, I have increased and decreases the brightness of the image by 50, You can choose any desired value, just make sure of maximum and minimum permissible limits of pixels.
 
 REQUIREMENTS:
+
 1. System should have OpenCV installed.
 2. System should have GCC installed.
 3. Any IDE (preferably Xcode or Visual Studio as setup of OpenCV will be easier in these)
-4. Developer must give the correct path of the image that has to be blurred.
+4. Developer must give the correct path of the image that has to be processed.
 
 
 CONCLUSION:
-The output shows the original image and the blurred image.
+
+The output shows the original image and the image with the increased and decreased brightness.
 Thanks & Happy Coding :)
